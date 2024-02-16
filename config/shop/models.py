@@ -42,13 +42,12 @@ class Star(models.Model):
         super().save(*args, **kwargs)
         img = Image.open(self.image.path)
 
-        if img.height > 400 or img.weight > 300:
+        if img.height > 400 or img.width > 300:
             img.thumbnail((400, 300))
             img.save(self.image.path)
 
     def get_absolute_url(self):
-        return f'/{self.slug}/{self.created_at.year}/\
-                {self.created_at.month}/{self.created_at.day}/'
+        return f'/{self.created_at.strftime("%Y/%m/%d")}/{self.slug}/'
 
     def __str__(self):
         return f'<star ({self.name}, {self.categorie}, {self.price})>'

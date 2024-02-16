@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	{% for star in object_list %}
+		<img src="{{ star.image.url }}" alt="{{ star.name }}">
+		<p><a href="{{ star.get_absolute_url }}">{{ star.name }}</a></p>
+		<p>{{ star.description }}</p>
+		<p>{{ star.created_at }}</p>
+	{% endfor %}
+{% endblock content %}
