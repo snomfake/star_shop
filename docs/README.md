@@ -1,4 +1,4 @@
-# STAR SHOP
+# STAR SHOP 🌠
 
 ## DESCRIPTION
 
@@ -46,4 +46,4 @@
 - - HTML && CSS
 
 ## 3. Models
-![Models](docs/models.jpg)
+![Models](models.jpg)
