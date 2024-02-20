@@ -1,5 +1,7 @@
 {% extends 'index.html' %}
 
+{% block title %} {{ star.name }} {% endblock title %}
+
 {% block content %}
 	<img src="{{ star.image.url }}" alt="{{ star.name }}">
 	<p><a href="#">{{ star.name }}</a></p>

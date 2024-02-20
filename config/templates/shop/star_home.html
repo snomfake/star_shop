@@ -1,7 +1,9 @@
 {% extends 'index.html' %}
 
+{% block title %} Welcome to Star Shop {% endblock title %}
+
 {% block content %}
-	{% for star in object_list %}
+	{% for star in stars %}
 		<img src="{{ star.image.url }}" alt="{{ star.name }}">
 		<p><a href="{{ star.get_absolute_url }}">{{ star.name }}</a></p>
 		<p>{{ star.description }}</p>
